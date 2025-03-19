@@ -50,6 +50,7 @@ class Calculator:
         tk.Button(width=11, height=4, text="x", relief="flat", bg="white", command=lambda: self.show("*")).place(x=270,
                                                                                                                  y=125)
         tk.Button(width=11, height=4, text="=", relief="flat", bg="lightblue", command=self.solve).place(x=270, y=350, )
+        
         tk.Button(width=11, height=4, text="C", relief="flat", bg="white", command=self.clear).place(x=0, y=350, )
 
     def show(self, value):
@@ -58,7 +59,7 @@ class Calculator:
 
     def clear(self):
         self.entry_value = ""
-        self.equation.set()
+        self.equation.set(self.entry_value)
 
     def solve(self):
         result = eval(self.entry_value)
