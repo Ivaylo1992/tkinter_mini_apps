@@ -1,15 +1,15 @@
 import tkinter as tk
 import pyttsx3
 
-engyne = pyttsx3.init()
+engine = pyttsx3.init()
 
 
 # Creating the function which executes the whole functionality
 def speaknow():
-    engyne.say(textv.get())
-    engyne.setProperty("rate", 115)  # Slowing down the speach rate
-    engyne.runAndWait()
-    engyne.stop()
+    engine.say(textv.get())
+    engine.setProperty("rate", 115)  # Slowing down the speech rate
+    engine.runAndWait()
+    engine.stop()
 
 
 root = tk.Tk()
